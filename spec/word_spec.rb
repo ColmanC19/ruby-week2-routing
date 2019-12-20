@@ -58,7 +58,7 @@ end
 
 describe('#definitions') do
     it("returns a word's definitions") do
-      word = Album.new("Large", nil)
+      word = Word.new("Large", nil)
       word.save()
       definition = Definition.new("Big", word.id, nil)
       definition.save()
