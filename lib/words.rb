@@ -18,8 +18,8 @@ class Word
   @@words[self.id] = Word.new(self.name, self.id)
   end
 
-  def ==(album_to_compare)
-    self.name() == album_to_compare.name()
+  def ==(word_to_compare)
+    self.name() == word_to_compare.name()
   end
 
   def self.clear
