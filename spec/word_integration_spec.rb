@@ -1,5 +1,5 @@
 require('rspec')
-require('album.rb')
+require('word.rb')
 require('capybara/rspec')
 require('./app')
 Capybara.app = Sinatra::Application
