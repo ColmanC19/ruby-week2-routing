@@ -10,10 +10,10 @@
 
 </form>
 
-<form action="/albums/<%= @word.id() %>" method="post">
+<form action="/words/<%= @word.id() %>" method="post">
   <input name="_method" type="hidden" value="delete">
 
   <button type="submit">Delete word</button>
 </form>
 
-<p><a href="/albums">Return to word list</a></p>
+<p><a href="/words">Return to word list</a></p>
