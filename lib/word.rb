@@ -40,8 +40,8 @@ class Word
     @@words.delete(self.id)
   end
 
-  def songs
-  Definitions.find_by_album(self.id)
+  def definitions
+  Definitions.find_by_word(self.id)
 end
 
 end

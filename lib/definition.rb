@@ -5,14 +5,14 @@ class Definition
   @@definitions = {}
   @@total_rows = 0
 
-  def initialize(name, album_id, id)
+  def initialize(name, word_id, id)
     @name = name
     @word_id = word_id
     @id = id || @@total_rows += 1
   end
 
-  def ==(song_to_compare)
-    (self.name() == song_to_compare.name()) && (self.word_id() == song_to_compare.word_id())
+  def ==(definition_to_compare)
+    (self.name() == definition_to_compare.name()) && (self.word_id() == definition_to_compare.word_id())
   end
 
   def self.all
@@ -27,10 +27,10 @@ class Definition
     @@definitions[id]
   end
 
-  def self.find_by_album(wrd_id)
+  def self.find_by_word(wrod_id)
   definitions = []
   @@definitions.values.each do |definition|
-    if definition.word_id == wrd_id
+    if definition.word_id == wrod_id
       definitions.push(definition)
     end
   end
