@@ -5,5 +5,4 @@ gem('rspec')
 gem('pry')
 gem('sinatra-contrib')
 gem('capybara')
-gem('ruby-2.5.1')
-gem ('rubygems-update'), '~> 2.5', '>= 2.5.1'
+gem ('nokogiri')
