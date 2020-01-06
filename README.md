@@ -19,7 +19,7 @@
 
 * To view the code, simply click on the lib/ruby-week1.rb file.
 
-*Heroku address is :
+*Heroku address is : https://vast-gorge-90292.herokuapp.com/words
 
 
 
