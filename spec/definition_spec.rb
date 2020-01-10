@@ -75,7 +75,7 @@ describe('#word') do
   it("finds the word a definition belongs to") do
     definition = Definition.new("Big", @word.id, nil)
     definition.save()
-    expect(song.word()).to(eq(@word))
+    expect(definition.word()).to(eq(@word))
   end
 end
 

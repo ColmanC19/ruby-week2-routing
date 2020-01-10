@@ -78,7 +78,7 @@ describe('#update') do
 end
 
 describe('#delete') do
-  it("deletes an album by id") do
+  it("deletes an word by id") do
     word = Word.new("Large", nil)
     word.save()
     word2 = Word.new("Jazz", nil)
