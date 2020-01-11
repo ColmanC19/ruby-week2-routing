@@ -1,5 +1,6 @@
 require('rspec')
 require('word.rb')
+require 'definition.rb'
 
 
 
@@ -58,15 +59,18 @@ end
 
 describe('#definitions') do
     it("returns a word's definitions") do
+      # Word.clear()
+      # Definition.clear()
       word = Word.new("Large", nil)
       word.save()
       definition = Definition.new("Big", word.id, nil)
       definition.save()
       definition2 = Definition.new("Huge", word.id, nil)
       definition2.save()
-      expect(word.songs).to(eq([definition, definition2]))
+      expect(word.definitions).to(eq([definition, definition2]))
     end
   end
+
 
 describe('#update') do
   it("updates a word by id") do
@@ -78,7 +82,7 @@ describe('#update') do
 end
 
 describe('#delete') do
-  it("deletes an word by id") do
+  it("deletes a word by id") do
     word = Word.new("Large", nil)
     word.save()
     word2 = Word.new("Jazz", nil)

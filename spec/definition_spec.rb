@@ -2,6 +2,7 @@ require 'rspec'
 require 'definition'
 require 'word'
 require 'pry'
+require 'word.rb'
 
 describe '#Definition' do
 
@@ -14,8 +15,8 @@ describe '#Definition' do
 
   describe('#==') do
     it("is the same definition if it has the same attributes as another definition") do
-      definition = Song.new("Big", @word.id, nil)
-      definition2 = Song.new("Big", @word.id, nil)
+      definition = Definition.new("Big", @word.id, nil)
+      definition2 = Definition.new("Big", @word.id, nil)
       expect(definition).to(eq(definition2))
     end
   end
@@ -31,7 +32,7 @@ describe '#Definition' do
   end
 
   describe('.clear') do
-    it("clears all songs") do
+    it("clears all definitions") do
       definition = Definition.new("Large", @word.id, nil)
       definition.save()
       definition2 = Definition.new("Big", @word.id, nil)

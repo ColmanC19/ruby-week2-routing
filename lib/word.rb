@@ -25,6 +25,7 @@ class Word
   def self.clear
     @@words = {}
     @@total_rows = 0
+    Definition.clear()
   end
 
   def self.find(id)
@@ -40,8 +41,11 @@ class Word
     @@words.delete(self.id)
   end
 
-  def definitions
-  Definitions.find_by_word(self.id)
+#   def definitions
+#   Definitions.find_by_word(self.id)
+# end
+def definitions
+  Definition.find_by_word(self.id)
 end
 
 end

@@ -1,5 +1,6 @@
 require('rspec')
 require('word.rb')
+require 'definition.rb'
 require('capybara/rspec')
 require('./app')
 Capybara.app = Sinatra::Application
@@ -9,7 +10,7 @@ describe('create a word path', {:type => :feature}) do
   it('creates a word and then goes to the word page') do
     visit('/words')
     save_and_open_page
-    click_on('Add a New Word')
+    click_on('Add a new word')
     fill_in('word_name', :with => 'Funky')
     click_on('Go!')
     expect(page).to have_content('Funky')
@@ -21,7 +22,7 @@ describe('create a definition path', {:type => :feature}) do
     word = Word.new("Funky", nil)
     word.save
     visit("/words/#{word.id}")
-    fill_in('definition_name', :with => 'Strongly Musty')
+    fill_in('definition_word_name', :with => 'Strongly Musty')
     click_on('Add definition')
     expect(page).to have_content('Strongly Musty')
   end
@@ -45,7 +46,7 @@ describe '#Word' do
     it("saves a word") do
       word = Word.new("Large", nil) # nil added as second argument
       word.save()
-      word2 = Album.new("Jazz", nil) # nil added as second argument
+      word2 = Word.new("Jazz", nil) # nil added as second argument
       word2.save()
       expect(Word.all).to(eq([word, word2]))
     end
