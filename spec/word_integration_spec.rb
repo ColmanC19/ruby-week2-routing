@@ -22,8 +22,9 @@ describe('create a definition path', {:type => :feature}) do
     word = Word.new("Funky", nil)
     word.save
     visit("/words/#{word.id}")
-    fill_in('definition_word_name', :with => 'Strongly Musty')
-    click_on('Add definition')
+    save_and_open_page
+    fill_in('definition_name', :with => 'Strongly Musty')
+    click_on('Add a definition to a word')
     expect(page).to have_content('Strongly Musty')
   end
 end

@@ -71,6 +71,22 @@ describe('#definitions') do
     end
   end
 
+  describe('#definitions') do
+      it("deletes a word and its definition's") do
+        word = Word.new("Large", nil)
+        word.save()
+        definition = Definition.new("Big", word.id, nil)
+        definition.save()
+        definition2 = Definition.new("Huge", word.id, nil)
+        definition2.save()
+        expect(word.definitions).to(eq([definition, definition2]))
+
+        word.delete()
+        expect(Word.all).to(eq([]))
+        expect(Definition.all).to(eq([]))
+      end
+    end
+
 
 describe('#update') do
   it("updates a word by id") do

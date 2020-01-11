@@ -37,6 +37,15 @@ class Definition
   definitions
 end
 
+def self.delete_definition_by_word(word_id)
+@@definitions.values.each do |definition|
+  if definition.word_id == word_id
+    @@definitions.delete(definition.id)
+
+  end
+end
+end
+
   def update(name, word_id)
     self.name = name
     self.word_id = word_id
