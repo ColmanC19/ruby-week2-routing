@@ -15,7 +15,7 @@ class Word
   end
 
   def save
-  @@words[self.id] = Word.new(self.name, self.id)
+    @@words[self.id] = Word.new(self.name, self.id)
   end
 
   def ==(word_to_compare)
@@ -29,7 +29,7 @@ class Word
   end
 
   def self.find(id)
-  @@words[id]
+    @@words[id]
   end
 
   def update(name)

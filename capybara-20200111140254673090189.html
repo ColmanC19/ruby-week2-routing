@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Words!!!</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Words!!</h1>
+
+<h3>Submitted words:</h3>
+<form action="/words">
+  <div class="form-group">
+    <label for="search">Search</label>
+    <input id="search" name="search" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Go!</button>
+</form>
+
+<ul>
+
+  <li><a href="/words/1">Large 1</a></li>
+
+</ul>
+
+<a href="/words/new">Add a new word!</a>
+
+    </div>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel=”stylesheet” type=”text/css” href=”../public/styles.css”/>
+  <title>All Sales Vinyl</title>
+</head>
+<body>
+  <div class="container">
+    <h1>All Sales Vinyl</h1>
+
+<h3>Available Records</h3>
+
+<form action="/words">
+  <div class="form-group">
+    <label for="search_input">Search</label>
+    <input id="search" name="search_input" class="form-control" type="text">
+  </div>
+  <button type="submit" class="danger">SEARCH!</button>
+</form>
+
+<form action="/words" method="get">
+  <input name="clear_inputs" type="hidden" value="clear">
+  <button type="submit" name="clear">Clear Results</button>
+</form>
+
+<form action="/words" method="get">
+  <input name="sort_list" type="hidden" value="search">
+  <button type="submit">Sort List</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+<p>There are currently no records to display.</p>
+
+<a href="/words/new">Add a new word</a>
+
+  </div>
+</body>
+</html>
