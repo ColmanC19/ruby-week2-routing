@@ -61,24 +61,24 @@ describe '#Definition' do
   end
 
   describe('.find_by_word') do
-  it("finds definitions for a word") do
-    word2 = Word.new("Jazz", nil)
-    word2.save
-    definition = Definition.new("Big", @word.id, nil)
-    definition.save()
-    definition2 = Definition.new("Massive", word2.id , nil)
-    definition2.save()
-    expect(Definition.find_by_word(word2.id)).to(eq([definition2]))
+    it("finds definitions for a word") do
+      word2 = Word.new("Jazz", nil)
+      word2.save
+      definition = Definition.new("Big", @word.id, nil)
+      definition.save()
+      definition2 = Definition.new("Massive", word2.id , nil)
+      definition2.save()
+      expect(Definition.find_by_word(word2.id)).to(eq([definition2]))
+    end
   end
-end
 
-describe('#word') do
-  it("finds the word a definition belongs to") do
-    definition = Definition.new("Big", @word.id, nil)
-    definition.save()
-    expect(definition.word()).to(eq(@word))
+  describe('#word') do
+    it("finds the word a definition belongs to") do
+      definition = Definition.new("Big", @word.id, nil)
+      definition.save()
+      expect(definition.word()).to(eq(@word))
+    end
   end
-end
 
   describe('#update') do
     it("updates a definition by id") do
